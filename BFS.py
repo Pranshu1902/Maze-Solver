@@ -161,7 +161,7 @@ class AI:
 
 
         img.show()
-        #img.save('maze.png')
+        img.save('maze.png')
 
 
 
@@ -169,6 +169,6 @@ class AI:
 
 
 maze = AI()
-#maze.solve()
+maze.solve()
 maze.generateImage()
 

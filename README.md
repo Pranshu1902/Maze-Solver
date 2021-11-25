@@ -7,4 +7,4 @@ GUI version is here. Enter the maze in the input box and get a visual comparisio
 
 The red blocks show the path AI travelled, yellow blocks show the answer path.
 
-Command prompt- python main.py maze.txt
+![Screenshot (87)](https://user-images.githubusercontent.com/70687348/143439866-df546ffe-ae48-4e9d-9b7c-66f4985de371.png)

@@ -1,5 +1,6 @@
 import PIL.Image
 import PIL.ImageTk
+from tkinter import filedialog
 from tkinter import *
 from DFS import AI
 from BFS import Game

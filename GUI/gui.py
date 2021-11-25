@@ -28,6 +28,15 @@ inputtxt.grid(column=1, row=3, pady=5)
 instructions = Label(window, text = "Enter # for wall, A for start, B for end, and space for path", font= ("Arial Bold", 20))
 instructions.grid(column=1, row=4, padx=10, pady=20)
 
+def browse():
+    input = filedialog.askopenfile(initialdir="/", filetypes=[("Text file", ".txt")])
+    inp = ""
+    for i in input:
+        inp+=i
+    print(inp)
+    inputtxt.delete("1.0", END)
+    inputtxt.insert(1.0, inp)
+
 def go_dfs():
     g = inputtxt.get("1.0", END)
     game = AI(g)
@@ -46,6 +55,8 @@ def go_ai():
     dfs_path, dfs_dead = ai.solve()
     game.generateCombinedImage(dfs_path, dfs_dead)
 
+grid1 = Button(window,text="Browse",font="Helvetica",bg="lightgreen",fg="black",height=2,width=20,command=browse)
+grid1.grid(column=1, row=5, padx=5, pady=5)
 
 grid2 = Button(window,text="DFS & BFS",font="Raleway",bg="cyan",fg="black",height=2,width=20,command=go_ai)
 grid2.grid(column=1, row=9, padx=5, pady=5)
